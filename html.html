@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Billing Software</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { width: 50%; margin-bottom: 20px; }
+        table, th, td { border: 1px solid black; border-collapse: collapse; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        input[type="number"] { width: 100%; }
+        .total { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Simple Billing Software</h1>
+    <table id="billingTable">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" value="Item 1"></td>
+                <td><input type="number" value="" step="0"></td>
+                <td><input type="number" value="" step="0"></td>
+                <td class="subtotal">0.00</td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="addItem()">Add Item</button>
+    <p>Total: <span id="total">0.00</span></p>
+    <p>Tax (10%): <span id="tax">0.00</span></p>
+    <p>Grand Total: <span id="grandTotal">0.00</span></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
